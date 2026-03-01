@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>适创科技 - 大模型算法工程师 [您的姓名] 简介</title>
+    <meta name="description" content="大模型算法工程师[您的姓名]在适创科技的个人简介，专注于模型优化与推理加速技术，致力于为压铸模拟领域提供AI解决方案。">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.5.6/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* 自定义背景动画 */
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* 主容器样式 */
+        .container {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            padding: 2rem;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            background-size: 400% 400%;
+            animation: gradientShift 15s ease infinite;
+            position: relative;
+        }
+
+        /* 个人照片容器 */
+        .profile-card {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 16px;
+            padding: 2rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            margin: 2rem auto;
+            max-width: 400px;
+            width: 90%;
+        }
+
+        /* 悬停动画效果 */
+        .profile-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        /* 动态内容切换容器 */
+        .content-slider {
+            position: relative;
+            overflow: hidden;
+            margin: 2rem 0;
+        }
+
+        /* 内容区块容器 */
+        .slide-content {
+            display: flex;
+            transform: translateX(0);
+            transition: transform 0.5s ease-in-out;
+        }
+
+        /* 底部导航标签样式 */
+        .tabs {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 2px;
+        }
+
+        .tabs button {
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            cursor: pointer;
+            background: rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+            border: none;
+            color: #2d3748;
+            font-weight: 500;
+        }
+
+        .tabs button:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: translateY(-2px);
+        }
+
+        /* 图片懒加载占位符 */
+        .image placeholder {
+            width: 200px;
+            height: 200px;
+            background-color: #f0f0f0;
+            border-radius: 50%;
+            margin: 0 auto 1rem auto;
+            transition: opacity 0.3s ease;
+        }
+
+        /* 文字自动换行 */
+        .break-words {
+            overflow-wrap: break-word;
+        }
+
+        /* 首屏图片立即加载 */
+        img[lazy=eager] {
+            loading: eager;
+        }
+    </style>
+</head>
+<body class="antialiased">
+    <div class="container">
+        <!-- 个人照片容器 -->
+        <div class="profile-card mx-auto">
+            <div class="image placeholder"></div>
+            <h1 class="text-center text-[clamp(1.5rem, 2vw, 2.5rem)] font-medium text-blue-600 mb-2">大家好！我是[您的姓名]，非常荣幸能加入适创科技担任大模型算法工程师</h1>
+            <div class="flex items-center justify-center mb-4">
+                <i class="fas fa-soccer-ball text-blue-500 mx-2"></i>
+                <h2 class="text-center text-[clamp(1.875rem, 2.5vw, 2.875rem)] font-medium text-blue-600 mb-2 mt-2">
+                    <span class="animate-fadeIn">我的座右铭是</span>
+                    "做对的事情，把事情做对"
+                </h2>
+                <i class="fas fa-soccer-ball text-blue-500 mx-2"></i>
+            </div>
+            <div class="text-center text-[clamp(1rem, 1.2vw, 1.25rem)] text-blue-800 mb-4">
+                <span class="mr-2">这源自足球传奇克鲁伊夫的智慧。</span>
+                <span class="mr-2">他曾经说：</span>
+                <span class="font-medium text-blue-600">"足球很简单，但踢简单的足球是最难的"。</span>
+                <span class="mr-2">对我而言，这意味着</span>
+                <span class="font-medium text-blue-600">在压铸模拟领域，我将专注于选择真正能创造价值的技术路径，同时以极致的专业态度将这些技术落地，让AI为工业生产带来简洁而高效的解决方案。</span>
+            </div>
+        </div>
+
+        <!-- 动态内容切换区域 -->
+        <div class="mx-auto max-w-[80%] md:max-w-[60%]">
+            <!-- 轮播内容容器 -->
+            <div class="content-slider">
+                <!-- 内容区块容器 -->
+                <div class="slide-content">
+                    <!-- 足球兴趣部分 -->
+                    <div class="flex flex-col md flex-row items-center justify-between gap-4 md:gap-8 mb-6">
+                        <div class="md:w-[40%]">
+                            <div class="image placeholder"></div>
+                            <h3 class="text-[clamp(1.25rem, 1.5vw, 1.5rem)] font-medium text-blue-600 mb-2">足球兴趣</h3>
+                            <p class="text-[clamp(1rem, 1.2vw, 1.125rem)] text-blue-800 mb-4 break-words">
+                                我不仅关注比赛结果，更着迷于足球战术分析与数据建模。
+                                <br class="md:hidden">
+                                <span class="font-medium">克鲁伊夫的"全攻全守"理念</span>
+                                教会我如何在团队协作中找到最佳位置与时机，
+                                <br class="md:hidden">
+                                这与大模型算法工程师的工作高度契合——
+                                <br class="md:hidden">
+                                我们需要理解模型的每个组件如何协同工作，才能实现整体效能的最大化。
+                            </p>
+                        </div>
+                        <div class="md:w-[60%]">
+                            <div class="image placeholder"></div>
+                            <h3 class="text-[clamp(1.25rem, 1.5vw, 1.5rem)] font-medium text-blue-600 mb-2">座右铭解读</h3>
+                            <p class="text-[clamp(1rem, 1.2vw, 1.125rem)] text-blue-800 mb-4 break-words">
+                                "做对的事情，把事情做对"反映了我在工作和生活中的核心价值观。
+                                <br class="md:hidden">
+                                在足球领域，这意味着理解比赛的本质并简洁地执行；在工业AI领域，意味着深入理解压铸工艺的物理特性，同时开发高效、精准的算法解决方案。
+                                <br class="md:hidden">
+                                <span class="font-medium">我始终相信，最好的技术是那些能真正解决实际问题的技术，而不是追求复杂而华而不实的方案。</span>
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- 为什么选择适创科技部分 -->
+                    <div class="flex flex-col md flex-row items-center justify-between gap-4 md:gap-8 mb-6">
+                        <div class="md:w-[60%]">
+                            <h3 class="text-[clamp(1.25rem, 1.5vw, 1.5rem)] font-medium text-blue-600 mb-2">为什么选择适创科技</h3>
+                            <p class="text-[clamp(1rem, 1.2vw, 1.125rem)] text-blue-800 mb-4 break-words">
+                                因为贵公司在压铸模拟领域引入大模型技术的战略非常明智。
+                                <br class="md:hidden">
+                                传统压铸模拟通常依赖复杂的物理模型和大量实验数据，
+                                <br class="md:hidden">
+                                而大模型可以显著提升仿真效率和精度，减少试错成本。
+                                <br class="md:hidden">
+                                <span class="font-medium">我曾在[您的相关项目/经历]中研究如何通过模型压缩和量化技术优化算法性能</span>，
+                                <br class="md:hidden">
+                                这与贵公司提升压铸模拟效率的目标高度契合。
+                            </p>
+                        </div>
+                        <div class="md:w-[40%]">
+                            <div class="image placeholder"></div>
+                        </div>
+                    </div>
+
+                    <!-- 技术专长部分 -->
+                    <div class="flex flex-col md flex-row items-center justify-between gap-4 md:gap-8 mb-6">
+                        <div class="md:w-[40%]">
+                            <div class="image placeholder"></div>
+                        </div>
+                        <div class="md:w-[60%]">
+                            <h3 class="text-[clamp(1.25rem, 1.5vw, 1.5rem)] font-medium text-blue-600 mb-2">技术专长</h3>
+                            <p class="text-[clamp(1rem, 1.2vw, 1.125rem)] text-blue-800 mb-4 break-words">
+                                我专注于模型优化与推理加速技术。
+                                <br class="md:hidden">
+                                压铸工艺涉及复杂的物理参数（如熔体流动、冷却速率、晶粒生长）和缺陷预测（如气孔、缩松），
+                                <br class="md:hidden">
+                                传统仿真耗时长、成本高。
+                                <br class="md:hidden">
+                                <span class="font-medium">大模型技术能够通过数据驱动的方式，精准预测关键参数，优化工艺流程</span>，
+                                <br class="md:hidden">
+                                <span class="font-medium">而模型压缩技术（如量化、剪枝）则能将这些强大的算法部署到工业现场，实现高效推理。</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 底部导航标签 -->
+            <div class="tabs">
+                <button data-target="section1">座右铭</button>
+                <button data-target="section2">足球兴趣</button>
+                <button data-target="section3">技术专长</button>
+            </div>
+        </div>
+
+        <script>
+            // 图片懒加载实现
+            document.addEventListener('DOMContentLoaded', function() {
+                // 获取所有图片占位符
+                const placeholders = document.querySelectorAll('.image placeholder');
+                // 获取所有内容区块
+                const contentBlocks = document.querySelectorAll('.slide-content > div');
+
+                // 初始化图片懒加载
+                placeholders.forEach((placeholder, index) => {
+                    // 创建真实图片元素
+                    const img = document.createElement('img');
+                    // 替换为您的实际图片链接
+                    const imageSources = [
+                        '克鲁伊夫经典进球图片链接',  // 座右铭部分
+                        '巴萨队徽链接',    // 足球兴趣部分
+                        '团队合作图片链接',  // 技术专长部分
+                    ][index % imageSources.length];
+                    img.src = imageSources;
+                    img loading = "lazy";
+                    img alt = "个人/公司图片";
+                    img class = "rounded-full object-cover w-full h-full absolute top-0 left-0";
+                    // 添加图片到占位符容器
+                    placeholder.appendChild(img);
+                    // 渐隐效果
+                    img.addEventListener('load', function() {
+                        placeholder.style.opacity = 0;
+                        this.style transition = 'opacity 0.5s ease';
+                        this.style.opacity = 1;
+                        setTimeout(() => {
+                            placeholder.style.display = 'none';
+                        }, 500);
+                    });
+                });
+
+                // 内容区块切换功能
+                const buttons = document.querySelectorAll('button[data-target]');
+                // 默认显示第一个内容区块
+                contentBlocks[0].style.display = 'block';
+
+                buttons.forEach(button => {
+                    button.addEventListener('click', function() {
+                        // 移除所有按钮的选中状态
+                        buttons.forEach(b => b.classList.remove('active'));
+                        // 添加当前按钮的选中状态
+                        this.classList.add('active');
+                        // 隐藏所有内容区块
+                        contentBlocks.forEach(block => block.style.display = 'none');
+                        // 显示被选中的内容区块
+                        const targetId = this.dataset.target;
+                        document.getElementById(targetId).style.display = 'block';
+                    });
+                });
+            });
+        </script>
+    </div>
+</body>
+</html>
